@@ -2,9 +2,8 @@
 .app-tabs {
     font-family: "Segoe UI", Arial, sans-serif;
     font-size: 14px;
-    margin: 16px 0;
+    height:0px
 }
-
 /* Liste principale des onglets */
 .app-tabs > ul {
     list-style: none;
@@ -84,3 +83,4 @@
     display: block;
 }
 .app-tabs ul { background: white;}
+.app-tabs ul li a {margin:0 0;}
