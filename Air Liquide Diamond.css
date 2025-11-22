@@ -48,4 +48,4 @@ button:hover,
   background-color: #00994f;
   border-color: #00994f;
 }
-#menubar{background-color: aqua;}
+#menubar{background-color: aqua!important;}
