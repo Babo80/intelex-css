@@ -1,1 +1,104 @@
-#menubar{background-color:#3498db!important}
+/* Barre d’onglets globale */
+.app-tabs {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 14px;
+    margin: 16px 0;
+}
+
+/* Liste principale des onglets */
+.app-tabs > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    border: 1px solid #2f8ec7;          /* bleu clair du contour */
+    border-radius: 6px;
+    overflow: hidden;                    /* pour que les coins arrondis coupent l’intérieur */
+}
+
+/* Chaque onglet (li) */
+.app-tabs > ul > li {
+    position: relative;
+}
+
+/* Lien d’onglet (état normal) */
+.app-tabs > ul > li > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 24px;
+    text-decoration: none;
+    color: #0074c1;                      /* texte bleu */
+    background: #ffffff;                 /* fond blanc */
+    border-right: 1px solid #c2dcee;     /* séparateur vertical */
+    white-space: nowrap;
+}
+
+/* Pas de bord droit sur le dernier onglet de la barre */
+.app-tabs > ul > li:last-child > a {
+    border-right: none;
+}
+
+/* Effet hover sur onglet inactif */
+.app-tabs > ul > li:not(.selected-tab) > a:hover {
+    background: #f5fbff;
+}
+
+/* Onglet sélectionné (bleu plein, texte blanc) */
+.app-tabs > ul > li.selected-tab > a {
+    background: #0074c1;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Onglet "More" poussé vers la droite */
+#more-button {
+    margin-left: auto;
+}
+
+/* Style du lien "More" + flèche */
+#more-button > a {
+    position: relative;
+    padding-right: 30px; /* un peu d’espace pour la flèche */
+}
+
+#more-button > a::after {
+    content: "▾";
+    position: absolute;
+    right: 10px;
+    font-size: 11px;
+}
+
+/* --------- Dropdown des onglets supplémentaires --------- */
+
+.app-tabs .extra-tabs {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: -1px;
+    margin: 0;
+    padding: 4px 0;
+    list-style: none;
+    background: #ffffff;
+    border: 1px solid #2f8ec7;
+    border-radius: 0 0 6px 6px;
+    z-index: 1000;
+}
+
+.app-tabs .extra-tabs li a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #0074c1;
+    white-space: nowrap;
+}
+
+.app-tabs .extra-tabs li a:hover {
+    background: #f5fbff;
+}
+
+/* Ouverture du menu au survol de "More" (simple, sans JS) */
+#more-button:hover .extra-tabs {
+    display: block;
+}
+
