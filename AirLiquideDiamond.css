@@ -10,9 +10,9 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    border: 1px solid #2f8ec7;          /* bleu clair du contour */
+    border: 1px solid #2f8ec7;          /* contour bleu */
     border-radius: 6px;
-    overflow: hidden;                    /* pour que les coins arrondis coupent l’intérieur */
+    overflow: hidden;                    /* les coins arrondis coupent l’intérieur */
 }
 
 /* Chaque onglet (li) */
@@ -49,12 +49,16 @@
     color: #ffffff;
     font-weight: 600;
 }
-/* Style du lien "More" + flèche */
+
+/* --------- Onglet "More" + flèche --------- */
+
+/* le <li> doit avoir id="more-button" */
 #more-button > a {
     position: relative;
-    padding-right: 30px; /* un peu d’espace pour la flèche */
+    padding-right: 30px;      /* espace pour la flèche */
 }
 
+/* une seule flèche ajoutée en CSS */
 #more-button > a::after {
     content: "▾";
     position: absolute;
@@ -90,7 +94,7 @@
     background: #f5fbff;
 }
 
-/* Ouverture du menu au survol de "More" (simple, sans JS) */
+/* Ouverture du menu au survol de "More" (sans JS) */
 #more-button:hover .extra-tabs {
     display: block;
 }
