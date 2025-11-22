@@ -10,7 +10,6 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
     border: 1px solid #2f8ec7;          /* bleu clair du contour */
     border-radius: 6px;
     overflow: hidden;                    /* pour que les coins arrondis coupent l’intérieur */
@@ -50,12 +49,6 @@
     color: #ffffff;
     font-weight: 600;
 }
-
-/* Onglet "More" poussé vers la droite */
-#more-button {
-    margin-left: auto;
-}
-
 /* Style du lien "More" + flèche */
 #more-button > a {
     position: relative;
@@ -101,4 +94,3 @@
 #more-button:hover .extra-tabs {
     display: block;
 }
-
