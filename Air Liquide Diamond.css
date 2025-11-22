@@ -48,8 +48,3 @@ button:hover,
   background-color: #00994f;
   border-color: #00994f;
 }
-
-/* Lignes de grille survolées (listes / tableaux) */
-.x-grid-row-over {
-  background-color: #f0f7ff;
-}
