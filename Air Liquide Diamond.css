@@ -1,51 +1,6 @@
-/* Police et texte de base */
+* {
+  outline: 3px solid red !important;
+}
 body {
-  font-family: Arial, sans-serif;
-  font-size: 18px;
+  background: yellow !important;
 }
-
-/* Bandeau / en-tête de l’appli (si présent) */
-.intelex-header,
-.x-panel-application-header {
-  background-color: #00477b;   /* bleu foncé entreprise */
-  color: #ffffff;
-}
-
-/* Titres de sections */
-h1, h2, h3,
-.section-title,
-.x-panel-header-text {
-  color: #00477b;
-  font-weight: 600;
-}
-
-/* Labels de champs */
-label,
-.x-form-item-label {
-  font-size: 12px;
-}
-
-/* Champs obligatoires (exemple de style) */
-.x-form-item-label .required,
-.x-form-item-label .x-form-required-field {
-  color: #c0392b;        /* rouge */
-  font-weight: bold;
-}
-
-/* Boutons standards */
-button,
-.x-btn,
-.x-btn-default-small {
-  background-color: #007b3e;   /* vert */
-  border-color: #007b3e;
-  color: #ffffff;
-}
-
-/* Survol des boutons */
-button:hover,
-.x-btn:hover,
-.x-btn-default-small:hover {
-  background-color: #00994f;
-  border-color: #00994f;
-}
-#menubar{background-color: aqua!important;}
