@@ -90,6 +90,13 @@
 .body-wrapper thead tr.header-filter th{position: sticky !important; top: var(--hdr-h, 40px); z-index: 40; background: #fff;}
 .body-wrapper thead tr.header th .items{ position: absolute !important;  left: 0;  top: 100%;  z-index: 60; overflow: visible !important; }
 .filterbuilder .predicate.editmode {   z-index: 70 !important;}
-.some-element {
-   margin-top: var(--hdr-h, 42px);
+.body-wrapper table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.body-wrapper thead tr.header th,
+.body-wrapper thead tr.header-filter th {
+  padding-top: 0;
+  padding-bottom: 0;
 }
