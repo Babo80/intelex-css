@@ -33,7 +33,7 @@
 }
 
 /* Triangle sous l’onglet sélectionné */
-.app-tabs > ul > li.selected-tab > li::after {
+.app-tabs ul li.selected-tab:after {
     content: "";
     position: absolute;
     left: 50%;
