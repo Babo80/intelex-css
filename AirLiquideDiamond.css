@@ -30,6 +30,21 @@
     background: #ffffff;                 /* fond blanc */
     border-right: 1px solid #c2dcee;     /* séparateur vertical */
     white-space: nowrap;
+    position: relative;
+}
+
+/* Triangle sous l’onglet sélectionné */
+.app-tabs > ul > li.selected-tab > a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;                /* profondeur du triangle sous l’onglet */
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #0074c1;   /* même bleu que l’onglet */
 }
 
 /* Pas de bord droit sur le dernier onglet de la barre */
