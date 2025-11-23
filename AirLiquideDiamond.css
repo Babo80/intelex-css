@@ -84,19 +84,51 @@
 .app-tabs ul { background: white;}
 .app-tabs ul li a {margin:0 0;}
 
-.body-wrapper{   max-height: 70vh;  overflow: auto; }
-.body-wrapper table{  border-collapse: separate;  border-spacing: 0;}
-.body-wrapper thead tr.header th{ position: sticky !important;  top: 0;  z-index: 50;  background: #fff;}
-.body-wrapper thead tr.header-filter th{position: sticky !important; top: var(--hdr-h, 40px); z-index: 40; background: #fff;}
-.body-wrapper thead tr.header th .items{ position: absolute !important;  left: 0;  top: 100%;  z-index: 60; overflow: visible !important; }
-.filterbuilder .predicate.editmode {   z-index: 70 !important;}
-.body-wrapper table {
-  border-collapse: collapse;
-  border-spacing: 0;
+/* Conteneur scrollable */
+.body-wrapper {
+    max-height: 70vh;
+    overflow: auto;
 }
 
+/* Table propre, sans espace entre les cellules */
+.body-wrapper table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Ligne d’en-tête (titres de colonnes) collée en haut */
+.body-wrapper thead tr.header th {
+    position: sticky !important;
+    top: 0;
+    z-index: 50;
+    background: #fff;
+}
+
+/* Ligne des filtres collée juste en dessous de l’en-tête */
+.body-wrapper thead tr.header-filter th {
+    position: sticky !important;
+    top: 28px;              /* ← à ajuster si besoin, voir note dessous */
+    z-index: 40;
+    background: #fff;
+}
+
+/* Le menu déroulant de tri doit passer par-dessus */
+.body-wrapper thead tr.header th .items {
+    position: absolute !important;
+    left: 0;
+    top: 100%;
+    z-index: 60;
+    overflow: visible !important;
+}
+
+/* Filtre avancé au-dessus de tout */
+.filterbuilder .predicate.editmode {
+    z-index: 70 !important;
+}
+
+/* Optionnel : réduire un peu la hauteur des lignes */
 .body-wrapper thead tr.header th,
 .body-wrapper thead tr.header-filter th {
-  padding-top: 0;
-  padding-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 }
